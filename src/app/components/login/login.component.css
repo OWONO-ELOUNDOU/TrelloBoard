@@ -34,13 +34,20 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-    width: 250px;
-    aspect-ratio: 1/1;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--electric-violet);
-    padding: 30px;
-    background-color: #FFFFFF;
-    border-radius: 10px 30px 10px 30px;
+.hero {
+    height: 100vh;
+}
+.hero .header h2 {
+    background: var(--red-to-pink-to-purple-horizontal-gradient);
+    background-clip: text;
+    color: transparent;
+}
+.hero .login {
+    width: clamp(250px, 100%, 400px);
+    padding: 20px;
+    border-radius: 20px;
+}
+button {
+    background-color: var(--french-violet);
+    color: #ffffff;
 }

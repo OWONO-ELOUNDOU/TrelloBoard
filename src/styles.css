@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import Google font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Tailwindcss Imports */
 @tailwind base;
 @tailwind components;
@@ -8,7 +11,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 body {
-    background-color: snow;
+    background-color: #f4f4f4;
 }

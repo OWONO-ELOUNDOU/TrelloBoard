@@ -20,8 +20,8 @@ create trigger on_board_created
 create or replace function public.handle_new_user()
 returns trigger as $$
 begin
-  insert into public.users (id, email, username)
-  values (new.id, new.email, new.username);
+  insert into public.users (id, email)
+  values (new.id, new.email);
   return new;
 end;
 $$ language plpgsql security definer;

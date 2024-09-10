@@ -1,1 +1,34 @@
-<p>login works!</p>
+<ngx-spinner type="ball-scale-multiple" />
+
+<div class="hero w-full flex items-center justify-center flex-col gap-y-12">
+    <div class="header">
+        <h2 class="text-3xl text-center font-extrabold text-gray-900 mt-6">supabase Trello</h2>
+    </div>
+
+    <div class="login shadow bg-white" *ngIf="!linkSuccess; else check_mails">
+        <div class="flex items-start justify-start flex-col gap-5" (ngSubmit)="signIn()">
+            <div class="input-field w-full flex items-start justify-start flex-col gap-3">
+                <label for="email" class="font-semibold">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    [(ngModel)]="email"
+                    class="w-full pl-3 rounded-md"
+                >
+            </div>
+
+            <div class="button w-full">
+                <button
+                    type="submit"
+                    class="button w-full py-2 font-semibold border rounded-md"
+                    (click)="signIn()"
+                >
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+    <ng-template #check_mails>Please check your mails!</ng-template>
+</div>

@@ -38,8 +38,8 @@ export class AuthService {
     })
   }
 
-  signInWithEmail(email: string, phone: string) {
-    return this.supabase.auth.signInWithOtp({email, phone})
+  signInWithEmail(email: string) {
+    return this.supabase.auth.signInWithOtp({ email })
   }
 
   logout() {
